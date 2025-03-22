@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-pesanan.css">
+    <title>E-Yoga</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <h1 class="logo">E-masion</h1>
+            <div class="profil">
+                <div class="stats-user">
+                    <h3>Yoga Ananda Sabila Rizqi</h3>
+                    <h4>Pengunjung</h4>
+                </div>
+                <img src="img/profil.png" alt="profil" class="profil-img">
+            </div>
+        </div>
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="katalog.html">Katalog</a></li>
+                    <li class="active-bg"><a class="active" href="#">Pesanan</a></li>
+                    <li><a href="settings.html">Setting</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="hamburger">
+            <div class="hamburger-menu">
+                <div class="wrap">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="bottom-nav">
+            <ul> 
+                <li><a href="index.html"><i class="fas fa-home "></i></a></li>
+                <li><a href="katalog.html"><i class="fas fa-box"></i></a></li>
+                <li><a href="pesanan.html"><i class="fas fa-shopping-cart active"></i></a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i></a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="container">
+                <h2>Pesanan Saya</h2>
+                
+                <div class="order-grid">
+                    <!-- Sedang Diproses -->
+                    <div class="order-column">
+                        <h3>📦 Sedang Diproses</h3>
+                        <div class="order-item">
+                            <img src="img/sepatu.jpg" alt="Produk 1">
+                            <div class="order-info">
+                                <h4>Sepatu Adidas</h4>
+                                <p>Rp150.000</p>
+                                <button class="cancel-btn">Batalkan</button>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Dikirim -->
+                    <div class="order-column">
+                        <h3>🚚 Dikirim</h3>
+                        <div class="order-item">
+                            <img src="img/patrick.jpg" alt="Produk 2">
+                            <div class="order-info">
+                                <h4>Patrick Kluivert</h4>
+                                <p>Rp2.000.000</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Sudah Diterima -->
+                    <div class="order-column">
+                        <h3>✅ Sudah Diterima</h3>
+                        <div class="order-item">
+                            <img src="img/bunga.jpg " alt="Produk 3">
+                            <div class="order-info">
+                                <h4>Bunga Matahari</h4>
+                                <p>Rp300.000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </div>
+        <div class="footer">
+            <p>CopyRight@yogaananda</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebar = document.querySelector(".sidebar");
+            const gridContainer = document.querySelector(".grid-container");
+            const hamburger = document.querySelector(".hamburger-menu");
+            const hamburger_wrap = document.querySelector(".hamburger");
+            
+        
+            hamburger.addEventListener("click", function () {
+                sidebar.classList.toggle("hidden"); // Tambah/hapus class hidden
+                
+                if (sidebar.classList.contains("hidden")) {
+                    gridContainer.style.gridTemplateColumns = "0px auto 1fr";
+                    hamburger_wrap.style.border= "2px solid #ccc"; // Sidebar hilang
+                    hamburger_wrap.style.backgroundColor = "#fff"
+                } else {
+                    gridContainer.style.gridTemplateColumns = "220px auto 1fr";
+                    hamburger_wrap.style.border= "none";
+                    hamburger_wrap.style.backgroundColor = "#fafafa"
+                     // Sidebar kembali
+                }
+            });
+        });
+        </script>
+        
+
+    
+</body>
+</html>

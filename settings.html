@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-settings.css">
+    <title>E-Yoga</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <h1 class="logo">E-masion</h1>
+            <div class="profil">
+                <div class="stats-user">
+                    <h3>Yoga Ananda Sabila Rizqi</h3>
+                    <h4>Pengunjung</h4>
+                </div>
+                <img src="img/profil.png" alt="profil" class="profil-img">
+            </div>
+        </div>
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="katalog.html">Katalog</a></li>
+                    <li><a href="pesanan.html">Pesanan</a></li>
+                    <li class="active-bg"><a class="active" href="setting.html">Setting</a></li>
+
+                </ul>
+            </nav>
+
+            
+            
+        </div>
+        <nav class="bottom-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home "></i></a></li>
+                <li><a href="katalog.html"><i class="fas fa-box"></i></a></li>
+                <li><a href="pesanan.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="settings.html"><i class="fas fa-cog active"></i></a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="hamburger-menu">
+                <div class="wrap">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+           <div class="profil-settings">
+            <div class="wrap">
+                <h3>Yoga Ananda Sabila Rizi</h3>
+                <h4>Pengunjung</h4>
+            </div>
+            <img src="img/profil.png" alt="profil">
+
+        </div>
+            <div class="data-diri">
+                <h5>Info Akun</h5>
+                    <div class="box akun">
+                        <p>Ubah Akun</p>
+                        <p>Lihat Akun</p>
+                        <p>Hapus Akun</p>
+                    </div>
+
+                <h5>Password</h5>
+                    <div class="box password">
+                        <p>Ubah Password</p>
+                        <p>Proteksi Tambahan</p>
+                    </div>
+
+                <h5>Alamat</h5>
+                    <div class="box alamat">
+                        <p>Lihat Detail Alamat</p>
+                        <p>Perbarui Alamat</p>
+                    </div>
+            </div>
+
+
+           
+        </div>
+        <div class="footer">
+            <p>CopyRight@yogaananda</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebar = document.querySelector(".sidebar");
+            const gridContainer = document.querySelector(".grid-container");
+            const hamburger = document.querySelector(".hamburger-menu");
+            const hamburger_wrap = document.querySelector(".hamburger");
+        
+            hamburger.addEventListener("click", function () {
+                sidebar.classList.toggle("hidden"); // Tambah/hapus class hidden
+                
+                if (sidebar.classList.contains("hidden")) {
+                    gridContainer.style.gridTemplateColumns = "0px auto 1fr";
+                    hamburger_wrap.style.border= "2px solid #ccc"; // Sidebar hilang
+                    hamburger_wrap.style.backgroundColor = "#fff"
+                } else {
+                    gridContainer.style.gridTemplateColumns = "220px auto 1fr";
+                    hamburger_wrap.style.border= "none";
+                    hamburger_wrap.style.backgroundColor = "#fafafa"
+                     // Sidebar kembali
+                }
+                
+            });
+        });
+        </script>
+        
+
+    
+</body>
+</html>

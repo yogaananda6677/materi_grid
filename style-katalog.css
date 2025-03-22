@@ -1,0 +1,130 @@
+.search-container {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 5px 10px;
+    width: 70%;
+    transition: width 0.3s ease-in-out;
+}
+
+
+.search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 8px;
+    font-size: 14px;
+    flex: 1; 
+}
+
+/* Tombol search */
+.search-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+/* Efek hover pada tombol */
+.search-button:hover {
+    transform: scale(1.1);
+}
+
+/* Saat search input aktif */
+.search-container:focus-within {
+    width: 80%; /* Perbesar saat fokus */
+    background-color: #e0e0e0;
+}
+
+.content .katalog {
+    display: flex;
+    flex-wrap: wrap;
+    margin:  auto;
+    width: 100%;
+    margin-top: 70px;
+    /* background-color: aqua; */
+    justify-content: center;
+    gap: 30px;
+    
+}
+
+.katalog .box {
+    padding: 15px 60px;
+    border: 2px solid #a3a0a0;
+    border-radius: 5px;
+    color: rgb(70, 68, 68);
+    /* background-color: #f3b035; */
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.katalog .box:hover{
+    background-color: #fbc766;
+    transition: background-color 0.3s ease-in-out;  
+    transition: color 0.3s ease-in-out;  
+    color: white;
+}
+
+
+.content .point {
+    width: 100%;
+    height: 10px;
+    /* background-color: aqua; */
+    margin-top: 50px;
+}
+
+.point .wrap{
+    width: 50px;
+    height: 10px;
+    /* background-color: black; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.point .wrap span {
+    width: 10px;
+    height: 10px;
+    background-color: #928f8f;
+    border-radius: 50%;
+}
+
+.point .wrap .active {
+    background-color: #5c5a5a;
+}
+
+
+
+@media only screen and (max-width : 768px) {
+    .search-container {
+        width: 85%;
+    }
+
+    .search-container:focus-within {
+        width: 90%;
+    }
+
+
+    .content .katalog {
+        display: flex;
+        flex-wrap: wrap;
+        margin:  auto;
+        width: 100%;
+        margin-top: 70px;
+        /* background-color: aqua; */
+        justify-content: center;
+        gap: 10px;
+        
+    }
+    .katalog .box{
+        padding: 10px 40px!important;
+        /* background-color: #5c5a5a; */
+        font-size: 12px!important;
+    } 
+
+
+
+}

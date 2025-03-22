@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>E-Yoga</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <h1 class="logo">E-masion</h1>
+            <div class="profil">
+                <div class="stats-user">
+                    <h3>Yoga Ananda Sabila Rizqi</h3>
+                    <h4>Pengunjung</h4>
+                </div>
+                <img src="img/profil.png" alt="profil" class="profil-img">
+            </div>
+        </div>
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li class="active-bg"><a class="active" href="#">Beranda</a></li>
+                    <li><a href="katalog.html">Katalog</a></li>
+                    <li><a href="pesanan.html">Pesanan</a></li>
+                    <li><a href="settings.html">Setting</a></li>
+
+                </ul>
+            </nav>
+
+            
+            
+        </div>
+        <nav class="bottom-nav">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home active"></i></a></li>
+                <li><a href="katalog.html"><i class="fas fa-box"></i></a></li>
+                <li><a href="pesanan.html"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i></a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div class="hamburger-menu">
+                <div class="wrap">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <h2>Menyediakan berbagai pilihan di <span>E-masion</span></h2>
+            <div class="wrapper">
+                
+                <div class="box">
+                    <img src="img/sepatu.jpg" alt="sepatu">
+                    <h4>Sepatu Puma</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, id!</p>
+                    <button type="button">Beli</button>
+                </div>
+                
+                <div class="box">
+                    <img src="img/komik.jpg" alt="komik">
+                    <h4>Komik Indonesia</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, id!</p>
+                    <button type="button">Beli</button>
+                </div>
+                
+                <div class="box">
+                    <img src="img/pongo.jpg" alt="pongo">
+                    <h4>Laptop Axioo Pongo 750</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, id!</p>
+                    <button type="button">Beli</button>
+                </div>
+                
+                <div class="box">
+                    <img src="img/mess.jpg" alt="">
+                    <h4>Jersey timnas Indonesia</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, id!</p>
+                    <button type="button">Beli</button>
+                </div>
+                
+                <div class="box">
+                    <img src="img/pinter.jpg" alt="">
+                    <h4>Printer Epson L125</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, id!</p>
+                    <button type="button">Beli</button>
+                </div>
+                
+                <div class="box">
+                    <img src="img/gamis.jpg" alt="">
+                    <h4>Gamis Wanita</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, id!</p>
+                    <button type="button">Beli</button>
+                </div>
+                
+                <div class="box">
+                    <img src="img/pashmina.jpg" alt="">
+                    <h4>Pashmina</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, id!</p>
+                    <button type="button">Beli</button>
+                </div>
+                
+                <div class="box">
+                    <img src="img/buku.jpg" alt="">
+                    <h4>Buku</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, id!</p>
+                    <button type="button">Beli</button>
+                </div>
+                
+                <div class="box">
+                    <img src="img/bola.jpg" alt="">
+                    <h4>Bola Sepak Anak</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, id!</p>
+                    <button type="button">Beli</button>
+                </div>
+                
+                <div class="box">
+                    <img src="img/kasur.jpg" alt="">
+                    <h4>Kasur</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, alias Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, id!</p>
+                    <button type="button">Beli</button>
+                </div>
+                
+        
+            </div>
+        </div>
+        <div class="footer">
+            <p>CopyRight@yogaananda</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sidebar = document.querySelector(".sidebar");
+            const gridContainer = document.querySelector(".grid-container");
+            const hamburger = document.querySelector(".hamburger-menu");
+            const hamburger_wrap = document.querySelector(".hamburger");
+        
+            hamburger.addEventListener("click", function () {
+                sidebar.classList.toggle("hidden"); // Tambah/hapus class hidden
+                
+                if (sidebar.classList.contains("hidden")) {
+                    gridContainer.style.gridTemplateColumns = "0px auto 1fr";
+                    hamburger_wrap.style.border= "2px solid #ccc"; // Sidebar hilang
+                    hamburger_wrap.style.backgroundColor = "#fff"
+                } else {
+                    gridContainer.style.gridTemplateColumns = "220px auto 1fr";
+                    hamburger_wrap.style.border= "none";
+                    hamburger_wrap.style.backgroundColor = "#fafafa"
+                     // Sidebar kembali
+                }
+                
+            });
+        });
+        </script>
+        
+
+    
+</body>
+</html>
